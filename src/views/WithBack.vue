@@ -68,7 +68,7 @@
                 : 'cardClose'
             "
             @click="
-              target.push(index+1);
+              target.push(index + 1);
               clickCard();
             "
           >
@@ -162,13 +162,12 @@ export default {
         })
         .then((response) => {
           console.log(response.data);
-          if (response.data.card.length === 1){
-            this.items[this.target-1].num = response.data.card[0]
-            this.items[this.target-1].status = response.data.card[0]
+          if (response.data.card.length === 1) {
+            this.items[this.target - 1].num = response.data.card[0];
+            this.items[this.target - 1].status = response.data.card[0];
           }
 
           console.log(this.items);
-          
         });
     },
     calculate() {
